@@ -1,0 +1,659 @@
+{
+	"info": {
+		"_postman_id": "871755b5-7668-4679-8e91-7cd26e1422e6",
+		"name": "Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6601275"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/login?username=User&password=User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "User"
+						},
+						{
+							"key": "password",
+							"value": "User"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Get",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/get?id=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/update?id=5&email=dattas@test.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						},
+						{
+							"key": "email",
+							"value": "dattas@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/delete?id=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin_Get",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/get?id=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"get"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Search",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/search?firstName=soukarya",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"search"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "soukarya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Add",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/add?id=2&firstName=Murali&lastName=Mohan&email=muralimohan@gl.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"add"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "firstName",
+							"value": "Murali"
+						},
+						{
+							"key": "lastName",
+							"value": "Mohan"
+						},
+						{
+							"key": "email",
+							"value": "muralimohan@gl.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_Logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/logout?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logout"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login_Admin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/login?username=Admin&password=Admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Admin"
+						},
+						{
+							"key": "password",
+							"value": "Admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin_Add",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/add?firstName=Murali&lastName=Mohan&email=muralimohan@gl.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"add"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Murali"
+						},
+						{
+							"key": "lastName",
+							"value": "Mohan"
+						},
+						{
+							"key": "email",
+							"value": "muralimohan@gl.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin_Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/delete?id=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin_Search",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/search?firstName=Tanya",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"search"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Tanya"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin_List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin_Addrole",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/signup/addrole?name=Editor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup",
+						"addrole"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Editor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin_Adduser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/signup/adduser?username=Editor&password=$2a$12$e0.u/iYoBgDRvnf7eW8wVe7yXOiK.Pnf1NGweqgiq9DK.I0I5CE0a&role_name=Editor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup",
+						"adduser"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Editor"
+						},
+						{
+							"key": "password",
+							"value": "$2a$12$e0.u/iYoBgDRvnf7eW8wVe7yXOiK.Pnf1NGweqgiq9DK.I0I5CE0a"
+						},
+						{
+							"key": "role_name",
+							"value": "Editor"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin_Logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic User:$2a$12$u5rYDUQsFgPOGot0yBjbxus.w9IARzy3gSLeEMXTDcChDjLC0nTEa\t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/logout?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logout"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
